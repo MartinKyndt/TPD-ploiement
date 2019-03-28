@@ -2,6 +2,7 @@
 """Ce code permet de dessiner des étoiles en utilisant l'outil graphique turtle
 """
 
+import doctest
 import turtle 
 
 def draw_stars(animal,size):
@@ -9,8 +10,10 @@ def draw_stars(animal,size):
 
 	Parameters 
 	----------
-	animal : l'objet de type turtle
-	size : la taille des côtés de l'étoile
+	animal : turtle 
+		l'objet de type turtle
+	size : int 
+		la taille des côtés de l'étoile
 
 	Returns 
 	-------
@@ -29,21 +32,26 @@ def draw_five_stars () :
 
 	Returns 
 	-------
-	Ne retourne rien
+	som : int 
+		la somme des angles dont la tortue a tourné
+	>>> draw_five_stars()
+	720
 	"""
+	som=0
 	for _ in range(5) :
 		draw_stars(tess,100)
 		tess.penup()
 		tess.forward(350)
 		tess.right(144)
+		som+=144
 		tess.pendown()
-
+	return som
 
 window=turtle.Screen() 
 window.bgcolor("lightgreen")
 tess=turtle.Turtle()
 draw_five_stars()
-
+doctest.testmod(verbose=True)
 
 
 
