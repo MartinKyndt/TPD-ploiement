@@ -33,7 +33,12 @@ def draw_five_stars () :
 	Returns 
 	-------
 	som : int 
-		la somme des angles dont la tortue a tourné
+		la somme des angles dont la tortue a tourné 
+		
+		.. math:: \sum angle
+	
+	Examples 
+	--------
 	>>> draw_five_stars()
 	720
 	"""

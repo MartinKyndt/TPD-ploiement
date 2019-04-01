@@ -1,0 +1,123 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>chapter4 &#8212; documentation Stars 0</title>
+    <link rel="stylesheet" href="../_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" /> 
+  </head>
+  <body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>documentation Stars 0</span></a></h1>
+        <h2 class="heading"><span>chapter4</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        <a class="uplink" href="../index.html">Contenu</a>
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <h1>Code source de chapter4</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;Ce code permet de dessiner des étoiles en utilisant l&#39;outil graphique turtle</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">doctest</span>
+<span class="kn">import</span> <span class="nn">turtle</span> 
+
+<div class="viewcode-block" id="draw_stars"><a class="viewcode-back" href="../chapter4.html#chapter4.draw_stars">[docs]</a><span class="k">def</span> <span class="nf">draw_stars</span><span class="p">(</span><span class="n">animal</span><span class="p">,</span><span class="n">size</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;Cette fonction permet de dessiner une étoile via le module turtle de python.</span>
+
+<span class="sd">	Parameters </span>
+<span class="sd">	----------</span>
+<span class="sd">	animal : turtle </span>
+<span class="sd">		l&#39;objet de type turtle</span>
+<span class="sd">	size : int </span>
+<span class="sd">		la taille des côtés de l&#39;étoile</span>
+
+<span class="sd">	Returns </span>
+<span class="sd">	-------</span>
+<span class="sd">	Ne retourne rien</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>	
+		<span class="n">animal</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+		<span class="n">animal</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">144</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="draw_five_stars"><a class="viewcode-back" href="../chapter4.html#chapter4.draw_five_stars">[docs]</a><span class="k">def</span> <span class="nf">draw_five_stars</span> <span class="p">()</span> <span class="p">:</span> 
+	<span class="sd">&quot;&quot;&quot;Cette fonction permet de dessiner cinq étoiles grâce à la fonction précédente.</span>
+
+<span class="sd">	Parameters </span>
+<span class="sd">	----------</span>
+<span class="sd">	Aucuns</span>
+
+<span class="sd">	Returns </span>
+<span class="sd">	-------</span>
+<span class="sd">	som : int </span>
+<span class="sd">		la somme des angles dont la tortue a tourné </span>
+<span class="sd">		</span>
+<span class="sd">		.. math:: \sum angle</span>
+<span class="sd">	</span>
+<span class="sd">	Examples </span>
+<span class="sd">	--------</span>
+<span class="sd">	&gt;&gt;&gt; draw_five_stars()</span>
+<span class="sd">	720</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	<span class="n">som</span><span class="o">=</span><span class="mi">0</span>
+	<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="p">:</span>
+		<span class="n">draw_stars</span><span class="p">(</span><span class="n">tess</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+		<span class="n">tess</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
+		<span class="n">tess</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">350</span><span class="p">)</span>
+		<span class="n">tess</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">144</span><span class="p">)</span>
+		<span class="n">som</span><span class="o">+=</span><span class="mi">144</span>
+		<span class="n">tess</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span>
+	<span class="k">return</span> <span class="n">som</span></div>
+
+<span class="n">window</span><span class="o">=</span><span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span> 
+<span class="n">window</span><span class="o">.</span><span class="n">bgcolor</span><span class="p">(</span><span class="s2">&quot;lightgreen&quot;</span><span class="p">)</span>
+<span class="n">tess</span><span class="o">=</span><span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+<span class="n">draw_five_stars</span><span class="p">()</span>
+<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+
+</pre></div>
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        <a class="uplink" href="../index.html">Contenu</a>
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Kyndt Démurger.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+    </div>
+  </body>
+</html>
