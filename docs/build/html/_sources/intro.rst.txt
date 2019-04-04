@@ -1,13 +1,13 @@
 La super introduction !
 =================================
 
-* this is
-* a list
 
-  * with a nested list
-  * and some subitems
+* Cette page décrit le programme Star, celui-ci permet de : 
 
-* and here the parent list continues
+  * dessiner une étoile avec l'outil turtle
+  * dessiner cinq étoiles sur une fenêtre verte 
+
+* Exemple d'image et de formule mathématiques : 
 
 .. image:: _static/insa.png 
 
