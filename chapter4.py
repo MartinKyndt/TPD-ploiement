@@ -23,12 +23,13 @@ def draw_stars(animal,size):
 		animal.forward(size)
 		animal.right(144)
 
-def draw_five_stars () : 
+def draw_five_stars (animal) : 
 	"""Cette fonction permet de dessiner cinq étoiles grâce à la fonction précédente.
 
 	Parameters 
 	----------
-	Aucuns
+	animal : turtle 
+		l'objet de type turtle
 
 	Returns 
 	-------
@@ -44,19 +45,15 @@ def draw_five_stars () :
 	"""
 	som=0
 	for _ in range(5) :
-		draw_stars(tess,100)
-		tess.penup()
-		tess.forward(350)
-		tess.right(144)
+		draw_stars(animal,100)
+		animal.penup()
+		animal.forward(350)
+		animal.right(144)
 		som+=144
-		tess.pendown()
+		animal.pendown()
 	return som
 
-window=turtle.Screen() 
-window.bgcolor("lightgreen")
-tess=turtle.Turtle()
-draw_five_stars()
-doctest.testmod(verbose=True)
+
 
 
 
